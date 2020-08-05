@@ -1,11 +1,11 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-Entity('appointments');
+@Entity('appointments')
 class Appointment {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column() // se não passar nada, já inicializa como varchar
+  @Column()
   provider: string;
 
   @Column('timestamp with time zone')
